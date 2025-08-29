@@ -1,1 +1,69 @@
 
+/* Paleta: rosado como color principal, acentos en morado claro */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8eaf6;
+  color: #4a0033;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #9c2164;
+}
+
+.malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.columna {
+  background: #ffe2f2;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.semestre {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ramo {
+  background: #ffc0da;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ramo.aprobado {
+  background: #d19ecb;
+  text-decoration: line-through;
+  color: #ffffff;
+}
+
+.ramo.bloqueado {
+  background: #f0d1e2;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.mensaje {
+  margin-top: 20px;
+  text-align: center;
+  color: #9c2164;
+  font-weight: bold;
+}
+
+/* Responsividad */
+
+@media (max-width: 600px) {
+  .malla {
+    grid-template-columns: 1fr;
+  }
+}
