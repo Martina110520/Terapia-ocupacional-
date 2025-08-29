@@ -10,6 +10,91 @@
   <h1>Malla Curricular - Terapia Ocupacional U. Mayor</h1>
   <div id="malla" class="malla"></div>
   <div id="mensaje" class="mensaje"></div>
+
+  <script>
+    // Aquí definimos la malla real con ramos y requisitos
+    const malla = {
+      1: [
+        { id: "Desarrollo personal y autoconocimiento", req: [] },
+        { id: "Fundamentos de Terapia Ocupacional", req: [] },
+        { id: "Estudios en ocupación y Terapia Ocupacional", req: [] },
+        { id: "Anatomía humana", req: [] },
+        { id: "Psicología general", req: [] },
+        { id: "Biología y microbiología", req: [] }
+      ],
+      2: [
+        { id: "Participación ocupacional I", req: ["Fundamentos de Terapia Ocupacional"] },
+        { id: "Desarrollo de la creatividad", req: [] },
+        { id: "Filosofía de la ocupación", req: [] },
+        { id: "Ciencias sociales y ocupación", req: ["Psicología general"] },
+        { id: "Fisiología general", req: ["Biología y microbiología"] }
+      ],
+      3: [
+        { id: "Participación ocupacional II", req: ["Participación ocupacional I"] },
+        { id: "Razonamiento estratégico terapéutico", req: ["Fundamentos de Terapia Ocupacional"] },
+        { id: "Salud basada en evidencia", req: [] },
+        { id: "Anatomía funcional y biomecánica I", req: ["Anatomía humana"] },
+        { id: "Gerontología ocupacional", req: ["Psicología general"] },
+        { id: "Fisiopatología", req: ["Fisiología general"] }
+      ],
+      4: [
+        { id: "Práctica integrada inicial", req: ["Participación ocupacional II"] },
+        { id: "Enfoques y modelos de práctica", req: ["Filosofía de la ocupación"] },
+        { id: "Desarrollo de la persona del terapeuta", req: [] },
+        { id: "Anatomía funcional y biomecánica II", req: ["Anatomía funcional y biomecánica I"] },
+        { id: "Psicomotricidad y curso de vida", req: ["Gerontología ocupacional"] },
+        { id: "Neurociencias", req: ["Fisiopatología"] }
+      ],
+      5: [
+        { id: "Participación ocupacional III", req: ["Práctica integrada inicial"] },
+        { id: "Razonamiento estratégico terapéutico II", req: ["Razonamiento estratégico terapéutico"] },
+        { id: "Diseños de investigación cuantitativa", req: ["Salud basada en evidencia"] },
+        { id: "Procesos de salud y enfermedad infantil", req: ["Neurociencias"] },
+        { id: "Procesos de salud y enfermedad en jóvenes y adultos", req: ["Neurociencias"] }
+      ],
+      6: [
+        { id: "Práctica integrada intermedia I", req: ["Participación ocupacional III"] },
+        { id: "Diseños de investigación cualitativa", req: ["Diseños de investigación cuantitativa"] },
+        { id: "Desafíos ocupacionales en adultos y personas mayores", req: ["Procesos de salud y enfermedad en jóvenes y adultos"] },
+        { id: "Procesos de salud ocupacional en adultos y personas mayores", req: ["Procesos de salud y enfermedad en jóvenes y adultos"] },
+        { id: "Salud pública", req: [] },
+        { id: "Bioética", req: [] }
+      ],
+      7: [
+        { id: "Proceso de Terapia Ocupacional inicial I", req: ["Práctica integrada intermedia I"] },
+        { id: "Ortótica y tecnología aplicada I", req: [] },
+        { id: "Procesos de salud ocupacional en niños y jóvenes", req: ["Procesos de salud y enfermedad infantil"] },
+        { id: "Procesos de salud ocupacional en adultos y personas mayores II", req: ["Procesos de salud ocupacional en adultos y personas mayores"] }
+      ],
+      8: [
+        { id: "Práctica integrada intermedia II", req: ["Proceso de Terapia Ocupacional inicial I"] },
+        { id: "Ortótica y tecnología aplicada II", req: ["Ortótica y tecnología aplicada I"] },
+        { id: "Proyecto de investigación", req: ["Diseños de investigación cualitativa"] },
+        { id: "Innovación y emprendimiento", req: [] },
+        { id: "Electivo 1", req: [] },
+        { id: "Electivo 2", req: [] },
+        { id: "Electivo 3", req: [] },
+        { id: "Electivo 4", req: [] }
+      ],
+      9: [
+        { id: "Práctica profesional I", req: ["Práctica integrada intermedia II"] },
+        { id: "Práctica profesional II", req: ["Práctica profesional I"] },
+        { id: "Desarrollo profesional I", req: [] },
+        { id: "Proyecto de título I", req: ["Proyecto de investigación"] }
+      ],
+      10: [
+        { id: "Práctica profesional III", req: ["Práctica profesional II"] },
+        { id: "Práctica profesional IV", req: ["Práctica profesional III"] },
+        { id: "Desarrollo profesional II", req: ["Desarrollo profesional I"] },
+        { id: "Proyecto de título II", req: ["Proyecto de título I"] },
+        { id: "Electivo 5", req: [] }
+      ]
+    };
+
+    // Guardamos la malla en window para usarla en script.js
+    window.malla = malla;
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
