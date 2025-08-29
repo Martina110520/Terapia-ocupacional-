@@ -1,9 +1,5 @@
-
-// Datos de ejemplo: materias por semestre y prerequisitos
-const malla = {
-  1: [{ id: 'Anatomía', req: [] }, { id: 'Psicología General', req: [] }],
-  2: [{ id: 'Psicología del Desarrollo', req: ['Psicología General'] }, { id: 'Biofísica I', req: ['Anatomía'] }],
-  3: [{ id: 'Neurociencias', req: ['Psicología del Desarrollo', 'Biofísica I'] }],
+// Usar la malla definida en index.html
+const malla = window.malla;
   // Agrega más semestres y ramos según tu malla real...
 };
 
